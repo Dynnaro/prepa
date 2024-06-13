@@ -10,7 +10,7 @@ photo = "https://images.plot.ly/logo/new-branding/plotly-logomark.png"
 dash.register_page(__name__, order=1, path="/home" )
 
 
-df = pd.read_csv('/Users/mak/Desktop/Code_With_Me/project/prepa-insights/c.csv')
+#df = pd.read_csv('/Users/mak/Desktop/Code_With_Me/project/prepa-insights/c.csv')
 Ctx=dash.callback_context
 
 
@@ -486,7 +486,7 @@ layout = html.Div([
     content,
 
 ])
-
+'''
 @callback(
     Output('graph-content', 'figure'),
     Input('dropdown-selection', 'value')
@@ -494,3 +494,4 @@ layout = html.Div([
 def update_graph(value):
     dff = df[df.country==value]
     return px.line(dff, x='year', y='pop')
+'''
