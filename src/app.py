@@ -2,7 +2,7 @@ import dash
 import dash_bootstrap_components as dbc
 from dash import Input, Output, dcc, html, State
 
-app = dash.Dash(__name__, use_pages=True,external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = dash.Dash(__name__, use_pages=True,external_stylesheets=[dbc.themes.BOOTSTRAP] ,include_assets_files=True)
 server = app.server
 
 app.title="Prepa Insights"
@@ -42,7 +42,7 @@ navbar = dbc.Navbar(
             ),
             dbc.Nav(
                 [
-                    dbc.NavItem(dbc.NavLink("Home", href="/home")),
+                    dbc.NavItem(dbc.NavLink("Home", href="/")),
                     dbc.NavItem(dbc.NavLink("About", href="/about")),
 
                     

@@ -7,7 +7,7 @@ import dash_leaflet as dl
 
 photo = "https://images.plot.ly/logo/new-branding/plotly-logomark.png"
 
-dash.register_page(__name__, order=1, path="/home" )
+dash.register_page(__name__, order=1, path="/" )
 
 
 #df = pd.read_csv('/Users/mak/Desktop/Code_With_Me/project/prepa-insights/c.csv')
