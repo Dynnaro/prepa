@@ -7,7 +7,7 @@ import plotly.express as px
 
 dash.register_page(__name__, order=2, path="/about")
 
-df = pd.read_csv("/Users/mak/Desktop/Code_With_Me/project/prepa-insights/c.csv")
+df = pd.read_csv("c.csv")
 
 about_us = html.P(['This project is made from students to Students.', html.Br(), 'The goal is to provide Prepa studnets with informations about each engineering school to help them make the appropriate choice for their orientation.'], className="border rounded bg-light p-3")
 
