@@ -5,7 +5,7 @@ import plotly.express as px
 import pandas as pd
 import dash_leaflet as dl
 
-
+photo = "https://images.plot.ly/logo/new-branding/plotly-logomark.png"
 
 dash.register_page(__name__, order=1, path="/home" )
 
@@ -54,7 +54,7 @@ faculties_Tunis = html.Div(
         [
                 dbc.Card(
                     [
-                        dbc.CardImg(src="/static/images/placeholder286x180.png", top=True),
+                        dbc.CardImg(src=photo, top=True),
                         dbc.CardBody(
                             [
                                 html.H4("Card title", className="card-title"),
@@ -63,7 +63,7 @@ faculties_Tunis = html.Div(
                                     "make up the bulk of the card's content.",
                                     className="card-text",
                                 ),
-                                dcc.Link(html.Button("LOG_VIEW"), href="/page"),
+                                dcc.Link(html.Button("View Statistics"), href="/page"),
                             ]
                         ),
                     ],

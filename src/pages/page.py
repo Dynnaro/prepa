@@ -11,6 +11,6 @@ dash.register_page(__name__, order=1, path="/page")
 
 
 layout = html.Div([
-    html.H1("ddddd"),
+    html.H1("Statistics"),
 
 ])

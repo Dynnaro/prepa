@@ -3,6 +3,7 @@ import dash_bootstrap_components as dbc
 from dash import Input, Output, dcc, html, State
 
 app = dash.Dash(__name__, use_pages=True,external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 
 app.title="Prepa Insights"
 
