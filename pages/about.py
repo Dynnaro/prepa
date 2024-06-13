@@ -4,7 +4,7 @@ from dash import Input, Output, dcc, html, State, callback
 
 
 
-dash.register_page(__name__, order=2)
+dash.register_page(__name__, order=2, path="/about")
 
 
 about_us = html.P(['This project is made from students to Students.', html.Br(), 'The goal is to provide Prepa studnets with informations about each engineering school to help them make the appropriate choice for their orientation.'], className="border rounded bg-light p-3")

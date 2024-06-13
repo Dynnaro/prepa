@@ -5,43 +5,18 @@ import plotly.express as px
 import pandas as pd
 import dash_leaflet as dl
 
-dash.register_page(__name__, order=1, path="/")
 
 
-df = pd.read_csv('/Users/mak/Desktop/Code_With_Me/project/c.csv')
+dash.register_page(__name__, order=1, path="/home" )
+
+
+df = pd.read_csv('/Users/mak/Desktop/Code_With_Me/project/prepa-insights/c.csv')
 Ctx=dash.callback_context
 
 
 
-CONTENT_STYLE = {
-    "margin-left": "18rem",
-    "margin-right": "2rem",
-    "padding": "2rem 1rem",
-    'height':'100vh',
-}
 
-
-
-content = html.Div(
-    
-    [
-        html.H1('hello world'),
-        dcc.Dropdown(df.country.unique(), 'Canada', id='dropdown-selection'),
-        dcc.Graph(id='graph-content'),
-        dl.Map(dl.TileLayer(), center=[56,10], zoom=6, style={'height': '70vh'})
-        
-    ],
-    
-    style=CONTENT_STYLE
-    
-    
-    
-    
-    
-    )
-
-
-
+'''
 
 # the style arguments for the sidebar. We use position:fixed and a fixed width
 SIDEBAR_STYLE = {
@@ -61,13 +36,453 @@ sidebar = html.Div(
     ],
     style=SIDEBAR_STYLE,
 )
+'''
 
 
+CONTENT_STYLE = {
+    "padding-left": "40px",
 
+    'height':'100%',
+}
+
+
+faculties_Tunis = html.Div(
+   
+    [
+    html.H1("Tunis:" ,id='tunis', className="bg-light p-2 rounded"),
+    dbc.Row(
+        [
+                dbc.Card(
+                    [
+                        dbc.CardImg(src="/static/images/placeholder286x180.png", top=True),
+                        dbc.CardBody(
+                            [
+                                html.H4("Card title", className="card-title"),
+                                html.P(
+                                    "Some quick example text to build on the card title and "
+                                    "make up the bulk of the card's content.",
+                                    className="card-text",
+                                ),
+                                dcc.Link(html.Button("LOG_VIEW"), href="/page"),
+                            ]
+                        ),
+                    ],
+                    className="d-flex justify-content-between",
+                    style={"width": "18rem", },
+                ),
+
+            
+                dbc.Card(
+                    [
+                        dbc.CardImg(src="/static/images/placeholder286x180.png", top=True),
+                        dbc.CardBody(
+                            [
+                                html.H4("Card title", className="card-title"),
+                                html.P(
+                                    "Some quick example text to build on the card title and "
+                                    "make up the bulk of the card's content.",
+                                    className="card-text",
+                                ),
+                                dbc.CardLink("External link", href="https://google.com"),
+                            ]
+                        ),
+                    ],
+                    className="d-flex justify-content-between",
+                    style={"width": "18rem", },
+                ),
+                dbc.Card(
+                    [
+                        dbc.CardImg(src="/static/images/placeholder286x180.png", top=True),
+                        dbc.CardBody(
+                            [
+                                html.H4("Card title", className="card-title"),
+                                html.P(
+                                    "Some quick example text to build on the card title and "
+                                    "make up the bulk of the card's content.",
+                                    className="card-text",
+                                ),
+                                dbc.CardLink("External link", href="https://google.com"),
+                            ]
+                        ),
+                    ],
+                    className="d-flex justify-content-between",
+                    style={"width": "18rem", },
+                ),
+
+        ],
+
+        className="mt-5", justify='around', align='center'
+        ),
+
+    dbc.Row(
+        [
+                dbc.Card(
+                    [
+                        dbc.CardImg(src="/static/images/placeholder286x180.png", top=True),
+                        dbc.CardBody(
+                            [
+                                html.H4("Card title", className="card-title"),
+                                html.P(
+                                    "Some quick example text to build on the card title and "
+                                    "make up the bulk of the card's content.",
+                                    className="card-text",
+                                ),
+                                dbc.CardLink("External link", href="https://google.com"),
+                            ]
+                        ),
+                    ],
+                    className="d-flex justify-content-between",
+                    style={"width": "18rem", },
+                ),
+
+            
+                dbc.Card(
+                    [
+                        dbc.CardImg(src="/static/images/placeholder286x180.png", top=True),
+                        dbc.CardBody(
+                            [
+                                html.H4("Card title", className="card-title"),
+                                html.P(
+                                    "Some quick example text to build on the card title and "
+                                    "make up the bulk of the card's content.",
+                                    className="card-text",
+                                ),
+                                dbc.CardLink("External link", href="https://google.com"),
+                            ]
+                        ),
+                    ],
+                    className="d-flex justify-content-between",
+                    style={"width": "18rem", },
+                ),
+                dbc.Card(
+                    [
+                        dbc.CardImg(src="/static/images/placeholder286x180.png", top=True),
+                        dbc.CardBody(
+                            [
+                                html.H4("Card title", className="card-title"),
+                                html.P(
+                                    "Some quick example text to build on the card title and "
+                                    "make up the bulk of the card's content.",
+                                    className="card-text",
+                                ),
+                                dbc.CardLink("External link", href="https://google.com"),
+                            ]
+                        ),
+                    ],
+                    
+                    className="d-flex justify-content-between",
+                    style={"width": "18rem", },
+                ),
+                
+
+        ],
+
+        className="mt-5", justify='around', align='center'
+        ),
+    
+        dbc.Row(
+        [
+                dbc.Card(
+                    [
+                        dbc.CardImg(src="/static/images/placeholder286x180.png", top=True),
+                        dbc.CardBody(
+                            [
+                                html.H4("Card title", className="card-title"),
+                                html.P(
+                                    "Some quick example text to build on the card title and "
+                                    "make up the bulk of the card's content.",
+                                    className="card-text",
+                                ),
+                                dbc.CardLink("External link", href="https://google.com"),
+                            ]
+                        ),
+                    ],
+                    className="d-flex justify-content-between",
+                    style={"width": "18rem", },
+                ),
+
+            
+                dbc.Card(
+                    [
+                        dbc.CardImg(src="/static/images/placeholder286x180.png", top=True),
+                        dbc.CardBody(
+                            [
+                                html.H4("Card title", className="card-title"),
+                                html.P(
+                                    "Some quick example text to build on the card title and "
+                                    "make up the bulk of the card's content.",
+                                    className="card-text",
+                                ),
+                                dbc.CardLink("External link", href="https://google.com"),
+                            ]
+                        ),
+                    ],
+                    className="d-flex justify-content-between",
+                    style={"width": "18rem", },
+                ),
+                dbc.Card(
+                    [
+                        dbc.CardImg(src="/static/images/placeholder286x180.png", top=True),
+                        dbc.CardBody(
+                            [
+                                html.H4("Card title", className="card-title"),
+                                html.P(
+                                    "Some quick example text to build on the card title and "
+                                    "make up the bulk of the card's content.",
+                                    className="card-text",
+                                ),
+                                dbc.CardLink("External link", href="https://google.com"),
+                            ]
+                        ),
+                    ],
+                    
+                    className="d-flex justify-content-between",
+                    style={"width": "18rem", },
+                ),
+                
+
+        ],
+
+        className="mt-5", justify='around', align='center'
+        ),
+        
+
+
+    ],
+style={"padding":"20px" , "margin-top":"0px"},            
+className="bg-dark rounded  ")   
+
+
+faculties_Bizert = html.Div(
+   
+    [
+    html.H1("Bizert:" ,id='bizert', className="bg-light p-2 rounded"),
+    dbc.Row(
+        [
+                dbc.Card(
+                    [
+                        dbc.CardImg(src="/static/images/placeholder286x180.png", top=True),
+                        dbc.CardBody(
+                            [
+                                html.H4("Card title", className="card-title"),
+                                html.P(
+                                    "Some quick example text to build on the card title and "
+                                    "make up the bulk of the card's content.",
+                                    className="card-text",
+                                ),
+                                dcc.Link(html.Button("LOG_VIEW"), href="/page"),
+                            ]
+                        ),
+                    ],
+                    className="d-flex justify-content-between",
+                    style={"width": "18rem", },
+                ),
+
+            
+                dbc.Card(
+                    [
+                        dbc.CardImg(src="/static/images/placeholder286x180.png", top=True),
+                        dbc.CardBody(
+                            [
+                                html.H4("Card title", className="card-title"),
+                                html.P(
+                                    "Some quick example text to build on the card title and "
+                                    "make up the bulk of the card's content.",
+                                    className="card-text",
+                                ),
+                                dbc.CardLink("External link", href="https://google.com"),
+                            ]
+                        ),
+                    ],
+                    className="d-flex justify-content-between",
+                    style={"width": "18rem", },
+                ),
+                dbc.Card(
+                    [
+                        dbc.CardImg(src="/static/images/placeholder286x180.png", top=True),
+                        dbc.CardBody(
+                            [
+                                html.H4("Card title", className="card-title"),
+                                html.P(
+                                    "Some quick example text to build on the card title and "
+                                    "make up the bulk of the card's content.",
+                                    className="card-text",
+                                ),
+                                dbc.CardLink("External link", href="https://google.com"),
+                            ]
+                        ),
+                    ],
+                    className="d-flex justify-content-between",
+                    style={"width": "18rem", },
+                ),
+
+        ],
+
+        className="mt-5", justify='around', align='center'
+        ),
+
+    dbc.Row(
+        [
+                dbc.Card(
+                    [
+                        dbc.CardImg(src="/static/images/placeholder286x180.png", top=True),
+                        dbc.CardBody(
+                            [
+                                html.H4("Card title", className="card-title"),
+                                html.P(
+                                    "Some quick example text to build on the card title and "
+                                    "make up the bulk of the card's content.",
+                                    className="card-text",
+                                ),
+                                dbc.CardLink("External link", href="https://google.com"),
+                            ]
+                        ),
+                    ],
+                    className="d-flex justify-content-between",
+                    style={"width": "18rem", },
+                ),
+
+            
+                dbc.Card(
+                    [
+                        dbc.CardImg(src="/static/images/placeholder286x180.png", top=True),
+                        dbc.CardBody(
+                            [
+                                html.H4("Card title", className="card-title"),
+                                html.P(
+                                    "Some quick example text to build on the card title and "
+                                    "make up the bulk of the card's content.",
+                                    className="card-text",
+                                ),
+                                dbc.CardLink("External link", href="https://google.com"),
+                            ]
+                        ),
+                    ],
+                    className="d-flex justify-content-between",
+                    style={"width": "18rem", },
+                ),
+                dbc.Card(
+                    [
+                        dbc.CardImg(src="/static/images/placeholder286x180.png", top=True),
+                        dbc.CardBody(
+                            [
+                                html.H4("Card title", className="card-title"),
+                                html.P(
+                                    "Some quick example text to build on the card title and "
+                                    "make up the bulk of the card's content.",
+                                    className="card-text",
+                                ),
+                                dbc.CardLink("External link", href="https://google.com"),
+                            ]
+                        ),
+                    ],
+                    
+                    className="d-flex justify-content-between",
+                    style={"width": "18rem", },
+                ),
+                
+
+        ],
+
+        className="mt-5", justify='around', align='center'
+        ),
+    
+        dbc.Row(
+        [
+                dbc.Card(
+                    [
+                        dbc.CardImg(src="/static/images/placeholder286x180.png", top=True),
+                        dbc.CardBody(
+                            [
+                                html.H4("Card title", className="card-title"),
+                                html.P(
+                                    "Some quick example text to build on the card title and "
+                                    "make up the bulk of the card's content.",
+                                    className="card-text",
+                                ),
+                                dbc.CardLink("External link", href="https://google.com"),
+                            ]
+                        ),
+                    ],
+                    className="d-flex justify-content-between",
+                    style={"width": "18rem", },
+                ),
+
+            
+                dbc.Card(
+                    [
+                        dbc.CardImg(src="/static/images/placeholder286x180.png", top=True),
+                        dbc.CardBody(
+                            [
+                                html.H4("Card title", className="card-title"),
+                                html.P(
+                                    "Some quick example text to build on the card title and "
+                                    "make up the bulk of the card's content.",
+                                    className="card-text",
+                                ),
+                                dbc.CardLink("External link", href="https://google.com"),
+                            ]
+                        ),
+                    ],
+                    className="d-flex justify-content-between",
+                    style={"width": "18rem", },
+                ),
+                dbc.Card(
+                    [
+                        dbc.CardImg(src="/static/images/placeholder286x180.png", top=True),
+                        dbc.CardBody(
+                            [
+                                html.H4("Card title", className="card-title"),
+                                html.P(
+                                    "Some quick example text to build on the card title and "
+                                    "make up the bulk of the card's content.",
+                                    className="card-text",
+                                ),
+                                dbc.CardLink("External link", href="https://google.com"),
+                            ]
+                        ),
+                    ],
+                    
+                    className="d-flex justify-content-between",
+                    style={"width": "18rem", },
+                ),
+                
+
+        ],
+
+        className="mt-5", justify='around', align='center'
+        ),
+        
+
+
+    ],
+style={"padding":"20px" , "margin-top":"40px"},            
+className="bg-dark rounded  ")    
+    
+
+
+content = html.Div(
+    
+    [
+        #dcc.Dropdown(df.country.unique(), 'Canada', id='dropdown-selection'),
+        #dcc.Graph(id='graph-content'),
+        #dl.Map(dl.TileLayer(), center=[56,10], zoom=6, style={'height': '70vh'})
+        faculties_Tunis,
+        faculties_Bizert
+        
+        
+    ],
+    
+    style=CONTENT_STYLE
+    
+    
+    
+    
+    
+    )
 
 
 layout = html.Div([
-    sidebar,
     content,
 
 ])
